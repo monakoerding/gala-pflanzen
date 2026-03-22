@@ -11,7 +11,6 @@ const PLANTS = [
     family: "Sapindaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 55720,
     description: "Blütezeit: April–Mai. Blütefarbe: Gelbgrün, unscheinbar. Heimischer Strauch oder kleiner Baum bis 15 m. Herbstfärbung leuchtend gelb. Charakteristisch: Korkleisten an Ästen. Verträgt Schnitt gut, gut für Hecken geeignet. Früchte: Geflügelte Doppelsamen (Samaren).",
   },
   {
@@ -21,7 +20,6 @@ const PLANTS = [
     family: "Sapindaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 54763,
     description: "Blütezeit: April (vor dem Blattaustrieb). Blütefarbe: Gelbgrün. Großer Laubbaum bis 30 m. Herbstfärbung leuchtend gelb-orange. Typisch: 5-lappige Blätter mit spitzen Buchten, weißer Milchsaft im Blattstiel. Wichtiger Straßenbaum.",
   },
   {
@@ -31,7 +29,6 @@ const PLANTS = [
     family: "Sapindaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 55850,
     description: "Blütezeit: Mai. Blütefarbe: Weiß mit gelb-roten Flecken, in aufrechten Kerzen. Großer Baum bis 25 m. Früchte: Stachelige Kapseln mit braunen Samen (Kastanien). Fingerförmig zusammengesetzte Blätter. Beliebter Park- und Alleebaum.",
   },
   {
@@ -41,7 +38,6 @@ const PLANTS = [
     family: "Rosaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 55847,
     description: "Blütezeit: April–Mai. Blütefarbe: Weiß, sternförmig. Strauch oder kleiner Baum bis 10 m. Frühjahrsblüher mit kupferrotem Blattaustrieb. Früchte: Kleine blaue Beeren (essbar). Herbstfärbung leuchtend orange-rot. Sehr pflegeleicht.",
   },
   {
@@ -51,7 +47,6 @@ const PLANTS = [
     family: "Berberidaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 193940,
     description: "Blütezeit: April–Mai. Blütefarbe: Gelb, unscheinbar. Kompakter Strauch bis 1,5 m. Auffällig: Purpur-rotes Laub die ganze Saison. Dornen am Stängel. Früchte: Rote Beeren (giftig). Gute Eigenschaft als Heckenpflanze.",
   },
   {
@@ -61,7 +56,6 @@ const PLANTS = [
     family: "Betulaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 54415,
     description: "Blütezeit: März–April. Blütefarbe: Grünlich (Kätzchen). Baum bis 30 m. Charakteristisch: Weiße, sich papierartig ablösende Borke, hängende Zweige. Tiefwurzler. Pioniergehölz auf Magerstandorten. Goldgelbe Herbstfärbung.",
   },
   {
@@ -71,7 +65,6 @@ const PLANTS = [
     family: "Scrophulariaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 62827,
     description: "Blütezeit: Juli–Oktober. Blütefarbe: Lila, weiß, pink, je nach Sorte. Schnellwüchsiger Strauch bis 3 m. Stark duftend, zieht Schmetterlinge an (Schmetterlingsstrauch). Wird im Frühjahr stark zurückgeschnitten. Leicht invasiv.",
   },
   {
@@ -81,7 +74,6 @@ const PLANTS = [
     family: "Buxaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 56799,
     description: "Blütezeit: März–Mai. Blütefarbe: Gelblich, unscheinbar. Immergrüner Strauch bis 5 m. Sehr schnittverträglich, klassische Formschnittgehölz. Alle Teile giftig. Bedroht durch Buchsbaumzünsler und Buchsbaumtriebsterben (Cylindrocladium).",
   },
   {
@@ -91,7 +83,6 @@ const PLANTS = [
     family: "Ericaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 56066,
     description: "Blütezeit: Juli–Oktober. Blütefarbe: Rosa-violett, selten weiß. Niederliegender Zwergstrauch bis 60 cm. Charakterpflanze der Heidegebiete (Lüneburger Heide). Benötigt saure, magere Böden. Winterharte Bienenweide.",
   },
   {
@@ -101,7 +92,6 @@ const PLANTS = [
     family: "Betulaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 55854,
     description: "Blütezeit: April–Mai. Blütefarbe: Grünlich (Kätzchen). Baum oder Strauch bis 25 m. Charakteristisch: Gerippte, doppelt gesägte Blätter; markante geflügelte Früchte. Behält Laub im Winter (Marceszenz). Hervorragende Heckenpflanze, sehr schnittverträglich.",
   },
   {
@@ -111,7 +101,6 @@ const PLANTS = [
     family: "Cornaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 56187,
     description: "Blütezeit: Mai–Juni. Blütefarbe: Weiß. Strauch bis 3 m. Wintereffekt: Leuchtend rote Äste im kahlen Zustand. Früchte: Weiße Beeren. Herbstfärbung rötlich. Für feuchte Standorte geeignet. Im Frühjahr zurückschneiden für intensivere Rotalität.",
   },
   {
@@ -121,7 +110,6 @@ const PLANTS = [
     family: "Cornaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 56185,
     description: "Blütezeit: Februar–März (einer der ersten Frühjahrsblüher, vor dem Blattaustrieb). Blütefarbe: Leuchtend gelb. Strauch oder kleiner Baum bis 8 m. Früchte: Rote, länglich-ovale Steinfrüchte (Kornelkirschen, essbar, reich an Vitamin C). Wichtig für Bienen.",
   },
   {
@@ -131,7 +119,6 @@ const PLANTS = [
     family: "Betulaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 55834,
     description: "Blütezeit: Januar–März (vor dem Blattaustrieb). Blütefarbe: Gelb (männliche Kätzchen), winzige rote weibliche Blüten. Vielstämmiger Strauch bis 6 m. Früchte: Haselnüsse in Hüllblättern. Frühjahrsblüher, wichtig für Bienen als erste Nahrung.",
   },
   {
@@ -141,7 +128,6 @@ const PLANTS = [
     family: "Betulaceae",
     category: "Laubgehölze",
     zwischenpruefung: false,
-    iNaturalistId: 198521,
     description: "Blütezeit: Januar–März. Blütefarbe: Gelb (Kätzchen). Strauch bis 3 m. Besonderheit: Stark gedrehte und gewundene Äste und Blätter. Besonders dekorativ im Winter ohne Laub. Wird häufig für Trockengestecke verwendet.",
   },
   {
@@ -151,7 +137,6 @@ const PLANTS = [
     family: "Rosaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 77233,
     description: "Blütezeit: Mai–Juni. Blütefarbe: Weiß. Flach kriechender Strauch bis 20 cm, breitet sich teppichförmig aus. Immergrün. Früchte: Leuchtend rote Beeren (dekorativ, für Vögel). Ideale Bodendecker-Pflanze, wächst auf fast jedem Standort.",
   },
   {
@@ -161,7 +146,6 @@ const PLANTS = [
     family: "Rosaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 77244,
     description: "Blütezeit: Mai–Juni. Blütefarbe: Rosa-weiß. Aufrechter, weit ausladender Strauch bis 2 m. Herbstfärbung intensiv rot. Früchte: Rote Beeren. Beliebt als Solitärstrauch oder lockere Hecke. Unempfindlich gegenüber Standortbedingungen.",
   },
   {
@@ -171,7 +155,6 @@ const PLANTS = [
     family: "Fabaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 56069,
     description: "Blütezeit: April–Juni. Blütefarbe: Leuchtend gelb. Strauch bis 2 m mit grünen Ruten. Fast blattlos, Photosynthese über grüne Zweige. Früchte: Schwarze Hülsen (giftig). Pionierpflanze auf Sandböden. Alle Pflanzenteile leicht giftig.",
   },
   {
@@ -181,7 +164,6 @@ const PLANTS = [
     family: "Hydrangeaceae",
     category: "Laubgehölze",
     zwischenpruefung: false,
-    iNaturalistId: 78019,
     description: "Blütezeit: Mai–Juni. Blütefarbe: Weiß, glockig. Kompakter Strauch bis 1 m. Sehr reichblühend, hängende Blütentriebe. Anspruchslos und robust. Ideal für kleinere Gärten und Rabatten. Regelmäßiger Rückschnitt nach der Blüte empfohlen.",
   },
   {
@@ -191,7 +173,6 @@ const PLANTS = [
     family: "Ericaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 56067,
     description: "Blütezeit: Januar–April (Winterblüher). Blütefarbe: Rosa bis purpurn, selten weiß. Immergrüner Zwergstrauch bis 30 cm. Im Gegensatz zu Calluna: verträgt auch kalkhaltige Böden. Wichtige Bienenweide im zeitigen Frühjahr.",
   },
   {
@@ -201,7 +182,6 @@ const PLANTS = [
     family: "Celastraceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 78048,
     description: "Blütezeit: Mai. Blütefarbe: Gelblich-grün, unscheinbar. Strauch bis 3 m. Charakteristisch: Korkartige Flügel an den Zweigen. Herbstfärbung leuchtendes Feuerrot (eine der besten Herbstfärbungen). Früchte: Rote Kapseln mit orangefarbenen Samen.",
   },
   {
@@ -211,7 +191,6 @@ const PLANTS = [
     family: "Celastraceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 78046,
     description: "Blütezeit: Juni–Juli. Blütefarbe: Gelblich-grün, unscheinbar. Immergrüner, kriechender oder kletternder Strauch. Haftet mit Luftwurzeln an Mauern. Viele Buntlaubsorten (z.B. 'Emerald Gaiety'). Sehr widerstandsfähig, guter Bodendecker.",
   },
   {
@@ -221,7 +200,6 @@ const PLANTS = [
     family: "Fagaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 55906,
     description: "Blütezeit: April–Mai. Blütefarbe: Grünlich (Kätzchen). Großer Baum bis 40 m. Herrschender Waldbaum in Mitteleuropa. Charakteristisch: Glatte graue Borke, eiförmige Blätter mit gewelltem Rand. Früchte: Bucheckern in Cupula. Marceszenz (behält Laub im Winter).",
   },
   {
@@ -231,7 +209,6 @@ const PLANTS = [
     family: "Poaceae",
     category: "Laubgehölze",
     zwischenpruefung: false,
-    iNaturalistId: 79101,
     description: "Blütezeit: Selten (Bambus blüht nur alle 80–120 Jahre, danach stirbt die Pflanze ab). Immergrünes, horstbildendes Gras bis 3 m. Nicht invasiv (keine Ausläufer). Winterhart bis –25 °C. Schöner Sichtschutz. Blätter im Winter gelegentlich eingerollt.",
   },
   {
@@ -241,7 +218,6 @@ const PLANTS = [
     family: "Oleaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 78100,
     description: "Blütezeit: März–April (vor dem Blattaustrieb). Blütefarbe: Leuchtend gelb. Vielstämmiger Strauch bis 3 m. Einer der auffälligsten Frühjahrsblüher. Rückschnitt direkt nach der Blüte. Anspruchslos und schnellwüchsig.",
   },
   {
@@ -251,7 +227,6 @@ const PLANTS = [
     family: "Oleaceae",
     category: "Laubgehölze",
     zwischenpruefung: false,
-    iNaturalistId: 55914,
     description: "Blütezeit: April–Mai (vor dem Blattaustrieb). Blütefarbe: Violett-rot, unscheinbar. Großer Baum bis 40 m. Charakteristisch: Schwarze Knospen, unpaarig gefiederte Blätter. Früchte: Geflügelte Nüsschen (Eschen-Samen). Bedroht durch Eschentriebsterben (Hymenoscyphus fraxineus).",
   },
   {
@@ -261,7 +236,6 @@ const PLANTS = [
     family: "Hamamelidaceae",
     category: "Laubgehölze",
     zwischenpruefung: false,
-    iNaturalistId: 78103,
     description: "Blütezeit: Januar–März (Winterblüher, kältehärtester Blüher). Blütefarbe: Gelb, orange oder rot je nach Sorte, bandförmige Blütenblätter. Strauch oder kleiner Baum bis 4 m. Stark duftend. Herbstfärbung leuchtend orange-rot. Besonderes Merkmal: Blüht bei Frost.",
   },
   {
@@ -271,7 +245,6 @@ const PLANTS = [
     family: "Malvaceae",
     category: "Laubgehölze",
     zwischenpruefung: false,
-    iNaturalistId: 78107,
     description: "Blütezeit: Juli–September (Spätsommerblüher). Blütefarbe: Weiß, rosa, violett, rot je nach Sorte. Aufrechter Strauch bis 3 m. Einer der wenigen spätblühenden Ziersträucher. Benötigt warmen, sonnigen Standort. Sommergrün.",
   },
   {
@@ -281,7 +254,6 @@ const PLANTS = [
     family: "Elaeagnaceae",
     category: "Laubgehölze",
     zwischenpruefung: false,
-    iNaturalistId: 56079,
     description: "Blütezeit: März–April (zweihäusig, männliche und weibliche Pflanzen getrennt). Blütefarbe: Gelblich, unscheinbar. Dorniger Strauch bis 6 m. Silbergraue Blätter. Früchte: Leuchtend orange Beeren, vitamin-C-reich, essbar. Pionierpflanze auf Sandböden und Meeresküsten.",
   },
   {
@@ -291,7 +263,6 @@ const PLANTS = [
     family: "Hydrangeaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 78075,
     description: "Blütezeit: Juli–September. Blütefarbe: Rosa, blau, weiß, rot – Farbe abhängig vom Boden-pH (sauer = blau, alkalisch = rosa). Strauch bis 2 m. Zwei Hauptformen: Kugelförmige Blütenbälle (Hortensie) und Tellerhortensie. Blüht am vorjährigen Holz, frostempfindlich.",
   },
   {
@@ -301,7 +272,6 @@ const PLANTS = [
     family: "Hypericaceae",
     category: "Laubgehölze",
     zwischenpruefung: false,
-    iNaturalistId: 56093,
     description: "Blütezeit: Juni–September. Blütefarbe: Leuchtend gelb, mit langen Staubfäden. Halbimmergrüner, niederliegender Strauch bis 40 cm. Ausgezeichneter Bodendecker auch im Schatten. Bildet dichte Matten durch Ausläufer. Wenig pflegebedürftig.",
   },
   {
@@ -311,7 +281,6 @@ const PLANTS = [
     family: "Aquifoliaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 58493,
     description: "Blütezeit: Mai–Juni. Blütefarbe: Weiß, klein. Immergrüner Strauch oder Baum bis 15 m. Charakteristisch: Stachelig gezähnte, glänzende Blätter. Zweihäusig (für Beeren braucht man männliche und weibliche Pflanzen). Früchte: Leuchtend rote Beeren (giftig). Winterfest.",
   },
   {
@@ -321,7 +290,6 @@ const PLANTS = [
     family: "Aquifoliaceae",
     category: "Laubgehölze",
     zwischenpruefung: false,
-    iNaturalistId: 58494,
     description: "Blütezeit: Mai–Juni. Blütefarbe: Weiß, sehr klein. Immergrüner Kompaktstrauch bis 1,5 m. Kleine, glänzend grüne Blätter ohne Stacheln. Gute Buchs-Alternative (resistent gegen Buchsbaumzünsler). Früchte: Kleine schwarze Beeren. Gut schnittverträglich.",
   },
   {
@@ -331,7 +299,6 @@ const PLANTS = [
     family: "Oleaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 78174,
     description: "Blütezeit: November–März (Winterblüher). Blütefarbe: Leuchtend gelb. Bogig überhängender Strauch bis 3 m, kein echter Kletterer. Nicht duftend (im Gegensatz zu Sommer-Jasmin). Überwintert grün mit grünen Ästen. Ideal an Mauern und Böschungen.",
   },
   {
@@ -341,7 +308,6 @@ const PLANTS = [
     family: "Juglandaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 55892,
     description: "Blütezeit: April–Mai. Blütefarbe: Grünlich (Kätzchen). Großer Baum bis 25 m. Charakteristisch: Große, gefiederte, aromatische Blätter. Früchte: Walnüsse in grüner Schale. Gibt Juglone ab (hemmt Wachstum anderer Pflanzen, Allelopathie). Wertvolles Holz.",
   },
   {
@@ -351,7 +317,6 @@ const PLANTS = [
     family: "Rosaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 78181,
     description: "Blütezeit: April–Mai, gelegentlich Nachblüte. Blütefarbe: Leuchtendes Dottergelb. Strauch bis 2 m mit grünen Zweigen. Häufige Gartenform: Gefüllte Sorte 'Pleniflora'. Grüne Äste dekorativ im Winter. Verträgt Halbschatten. Breitet sich durch Ausläufer aus.",
   },
   {
@@ -361,7 +326,6 @@ const PLANTS = [
     family: "Caprifoliaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 78192,
     description: "Blütezeit: Mai–Juni. Blütefarbe: Hellrosa mit gelbem Schlund, glockenförmig. Vielstämmiger Strauch bis 4 m mit überhängenden Zweigen. Sehr reich- und üppig blühend. Borke blättert in langen Streifen ab. Anspruchslos, sonniger Standort bevorzugt.",
   },
   {
@@ -371,7 +335,6 @@ const PLANTS = [
     family: "Fabaceae",
     category: "Laubgehölze",
     zwischenpruefung: false,
-    iNaturalistId: 56096,
     description: "Blütezeit: Mai–Juni. Blütefarbe: Leuchtend gelb, in langen hängenden Trauben bis 60 cm. Kleiner Baum bis 8 m. Alle Pflanzenteile stark giftig (besonders Samen). Eindrucksvoller Blütenbaum. Nicht mit Kindern in der Nähe pflanzen.",
   },
   {
@@ -381,7 +344,6 @@ const PLANTS = [
     family: "Oleaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 56101,
     description: "Blütezeit: Juni. Blütefarbe: Weiß, stark duftend. Halbimmergrüner Strauch bis 5 m. Früchte: Schwarze, giftige Beeren. Klassische Heckenpflanze, sehr schnittverträglich. Wichtige Nahrungspflanze für Schmetterlinge (Ligusterschwärmer).",
   },
   {
@@ -391,7 +353,6 @@ const PLANTS = [
     family: "Caprifoliaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 78200,
     description: "Blütezeit: Mai. Blütefarbe: Cremeweiß, sehr klein. Immergrüner, dicht verzweigter Strauch bis 1,5 m. Sehr kleine, glänzende Blätter. Ausgezeichnete Alternative zu Buchsbaum (resistent gegen Zünsler). Verträgt starken Schnitt. Gute Heckenpflanze.",
   },
   {
@@ -401,7 +362,6 @@ const PLANTS = [
     family: "Magnoliaceae",
     category: "Laubgehölze",
     zwischenpruefung: false,
-    iNaturalistId: 57125,
     description: "Blütezeit: März–April (vor dem Blattaustrieb). Blütefarbe: Innen weiß, außen rosa-violett, tulpenförmig. Strauch oder kleiner Baum bis 8 m. Eindrucksvolles Frühjahrsblühgehölz. Frostempfindliche Blüten. Benötigt windgeschützten, sonnigen Standort.",
   },
   {
@@ -411,7 +371,6 @@ const PLANTS = [
     family: "Berberidaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 56102,
     description: "Blütezeit: März–Mai. Blütefarbe: Leuchtend gelb, duftend. Immergrüner Strauch bis 1,5 m. Charakteristisch: Ledrig-stachelige, gefiederte Blätter, rötlich im Winter. Früchte: Blauschwarze Beeren (essbar, säuerlich). Wächst auch im Schatten gut.",
   },
   {
@@ -421,7 +380,6 @@ const PLANTS = [
     family: "Buxaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 78230,
     description: "Blütezeit: April–Mai. Blütefarbe: Weiß, unscheinbar. Immergrüner, niedriger Bodendecker bis 30 cm. Breitet sich durch unterirdische Ausläufer aus. Hervorragend für schattige Standorte unter Bäumen geeignet. Bildet dichte, pflegeleichte Matten.",
   },
   {
@@ -431,7 +389,6 @@ const PLANTS = [
     family: "Hydrangeaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 78240,
     description: "Blütezeit: Juni. Blütefarbe: Weiß, intensiv duftend (Orangenblütenduft). Vielstämmiger Strauch bis 3 m. Auch 'falscher Jasmin' genannt. Reich blühend. Rückschnitt direkt nach der Blüte. Sehr robust und anspruchslos.",
   },
   {
@@ -441,7 +398,6 @@ const PLANTS = [
     family: "Ericaceae",
     category: "Laubgehölze",
     zwischenpruefung: false,
-    iNaturalistId: 78246,
     description: "Blütezeit: März–April. Blütefarbe: Weiß, in hängenden Trauben (glockig). Immergrüner Strauch bis 3 m. Neues Laub leuchtend rot (besonderer Zierwert). Benötigt sauren Boden (Rhododendronerde). Alle Teile giftig. Windgeschützter Standort bevorzugt.",
   },
   {
@@ -451,7 +407,6 @@ const PLANTS = [
     family: "Platanaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 56058,
     description: "Blütezeit: Mai. Blütefarbe: Grünlich (Kugelförmige Blütenstände). Großer Baum bis 40 m. Charakteristisch: Sich in Platten ablösende Borke (camouflage-artiges Muster), große handförmige Blätter. Stadtklimafest. Klassischer Alleebaum. Früchte: Kugelförmige Hängsel.",
   },
   {
@@ -461,7 +416,6 @@ const PLANTS = [
     family: "Rosaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 56118,
     description: "Blütezeit: Mai–Oktober (sehr lange Blüte). Blütefarbe: Gelb, weiß oder orange je nach Sorte. Kompakter Strauch bis 1 m. Einer der langblühendsten Sträucher überhaupt. Sehr robust und anspruchslos. Ideal für Rabatten und Beete. Trockenheitsresistent.",
   },
   {
@@ -471,7 +425,6 @@ const PLANTS = [
     family: "Rosaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 55871,
     description: "Blütezeit: März–April (vor dem Blattaustrieb). Blütefarbe: Blassrosa bis weiß. Kleiner Baum oder Strauch bis 8 m. Charakteristisch: Dunkelrotes bis schwarzrotes Laub die gesamte Saison. Früchte: Kleine rötliche Pflaumen. Beliebter Ziergehölz für Farbenkontraste.",
   },
   {
@@ -481,7 +434,6 @@ const PLANTS = [
     family: "Rosaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 56038,
     description: "Blütezeit: April–Mai. Blütefarbe: Weiß, in aufrechten Trauben, leicht duftend. Immergrüner Strauch bis 8 m. Große, glänzende, ledrige Blätter. Früchte: Schwarze, kirschenartige Steinfrüchte (giftig). Beliebteste immergrüne Heckenpflanze in Deutschland.",
   },
   {
@@ -491,7 +443,6 @@ const PLANTS = [
     family: "Rosaceae",
     category: "Laubgehölze",
     zwischenpruefung: false,
-    iNaturalistId: 55872,
     description: "Blütezeit: April–Mai. Blütefarbe: Weiß bis rosa, meist gefüllt. Kleiner bis mittelgroßer Baum bis 12 m. Eindrucksvolles Frühjahrsblühereignis. Herbstfärbung orange-rot. Kupferfarbiger Blattaustrieb. Symbol für Vergänglichkeit in der japanischen Kultur (Kirschblütenfest).",
   },
   {
@@ -501,7 +452,6 @@ const PLANTS = [
     family: "Fagaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 56082,
     description: "Blütezeit: April–Mai. Blütefarbe: Grünlich (Kätzchen). Großer Baum bis 40 m, sehr langlebig (bis 1000 Jahre). Charakteristisch: Gelappte Blätter ohne Blattstiel direkt am Zweig. Früchte: Eicheln auf langen Stielen. Wichtigstes Ökosystem-Gehölz, beherbergt über 500 Insektenarten.",
   },
   {
@@ -511,7 +461,6 @@ const PLANTS = [
     family: "Fagaceae",
     category: "Laubgehölze",
     zwischenpruefung: false,
-    iNaturalistId: 56095,
     description: "Blütezeit: Mai. Blütefarbe: Grünlich, unscheinbar. Großer Baum bis 35 m. Aus Nordamerika eingeführt. Herbstfärbung: Leuchtend scharlachrot. Blätter größer als bei Stiel-Eiche, tiefer eingebuchtet. Eicheln benötigen 2 Jahre zur Reife. Schnellwüchsig.",
   },
   {
@@ -521,7 +470,6 @@ const PLANTS = [
     family: "Ericaceae",
     category: "Laubgehölze",
     zwischenpruefung: false,
-    iNaturalistId: 47757,
     description: "Blütezeit: April–Juni (je nach Sorte). Blütefarbe: Weiß, rosa, rot, lila, gelb, orange. Immergrüner oder sommergrüner Strauch bis 5 m. Benötigt sauren, humosen Boden (pH 4–5,5). Alle Pflanzenteile giftig. Spektakuläre Blütenpracht im Frühjahr.",
   },
   {
@@ -531,7 +479,6 @@ const PLANTS = [
     family: "Grossulariaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 56134,
     description: "Blütezeit: März–April (früher Frühjahrsblüher). Blütefarbe: Dunkelrot bis rosarot, in hängenden Trauben. Strauch bis 3 m. Früchte: Blauschwarze Beeren (ungenießbar, bitter). Sehr robust und anspruchslos. Aromatischer Duft der Blätter beim Zerreiben.",
   },
   {
@@ -541,7 +488,6 @@ const PLANTS = [
     family: "Fabaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 56117,
     description: "Blütezeit: Mai–Juni. Blütefarbe: Weiß, in hängenden Trauben, stark duftend. Schnellwüchsiger Baum bis 25 m. Dornen an Ästen (Nebenblattdornen). Stickstoffbindend durch Knöllchenbakterien. Sehr trockenheitsresistent. Holz extrem witterungsbeständig.",
   },
   {
@@ -551,7 +497,6 @@ const PLANTS = [
     family: "Rosaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 56057,
     description: "Blütezeit: Juni–Oktober (Dauerblüherin). Blütefarbe: Rosa bis purpurrot, selten weiß. Strauch bis 2 m. Charakteristisch: Stark runzlige Blätter, viele Dornen. Früchte: Sehr große, rote Hagebutten (vitamin-C-reich). Robust, salzverträglich (Küstenstandorte). Duftend.",
   },
   {
@@ -561,7 +506,6 @@ const PLANTS = [
     family: "Salicaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 55911,
     description: "Blütezeit: März–April. Blütefarbe: Gelb (Kätzchen). Großer Baum bis 25 m mit stark hängenden Zweigen. Typischer Uferbegleitbaum. Benötigt viel Wasser. Ausläufer können Kanalisation beschädigen. Symbolisch für Trauer. Auch Kätzchenweide.",
   },
   {
@@ -571,7 +515,6 @@ const PLANTS = [
     family: "Adoxaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 56060,
     description: "Blütezeit: Mai–Juli. Blütefarbe: Cremeweiß, in flachen Dolden, süßlich duftend. Strauch bis 7 m. Früchte: Schwarze Beeren in hängenden Dolden (Holunderbeeren, essbar nach dem Kochen, roh giftig). Blüten (Holunderblüten) für Sirup. Sehr schnellwüchsig.",
   },
   {
@@ -581,7 +524,6 @@ const PLANTS = [
     family: "Rosaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 56064,
     description: "Blütezeit: Mai–Juni. Blütefarbe: Weiß, in flachen Dolden. Baum bis 15 m. Früchte: Leuchtend orangerote, bittere Beeren (Vogelbeeren, gekocht essbar, roh leicht giftig). Herbstfärbung: Orange-rot. Wichtige Nahrungsquelle für Vögel. Sehr winterhart.",
   },
   {
@@ -591,7 +533,6 @@ const PLANTS = [
     family: "Rosaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 78385,
     description: "Blütezeit: April–Mai. Blütefarbe: Reinweiß, in dichten Dolden entlang der überhängenden Zweige. Strauch bis 2 m. Einer der schönsten weißblühenden Frühjahrsblüher. Zweige komplett mit weißen Blüten bedeckt (Schneeball-Effekt). Rückschnitt nach der Blüte.",
   },
   {
@@ -601,7 +542,6 @@ const PLANTS = [
     family: "Rosaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 78384,
     description: "Blütezeit: Juni–Juli. Blütefarbe: Rosa bis karminrot. Kompakter Zwergstrauch bis 80 cm. Sommerblüher. Neuer Trieb kupferfarben. Wird im Frühjahr stark zurückgeschnitten. Viele Sorten mit buntem Laub (goldgelb, orange). Langanhaltende Blüte.",
   },
   {
@@ -611,7 +551,6 @@ const PLANTS = [
     family: "Rosaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 78386,
     description: "Blütezeit: Mai–Juni. Blütefarbe: Weiß, in dichten Dolden. Vielstämmiger Strauch bis 2,5 m mit eleganten überhängenden Zweigen. Üppige Blütenpracht. Ähnlich der Braut-Spiere, aber größer und etwas später blühend. Robust und anspruchslos.",
   },
   {
@@ -621,7 +560,6 @@ const PLANTS = [
     family: "Oleaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 56061,
     description: "Blütezeit: April–Mai. Blütefarbe: Lila, violett, weiß, rosa – je nach Sorte. Strauch bis 7 m. Intensiv und angenehm duftend. Verwildert häufig. Rückschnitt muss verblühte Triebe entfernen. Verträgt keinen Wasserstau. Symbol des Frühjahrs.",
   },
   {
@@ -631,7 +569,6 @@ const PLANTS = [
     family: "Malvaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 55848,
     description: "Blütezeit: Juni–Juli. Blütefarbe: Gelblich-weiß, intensiv duftend. Großer Baum bis 30 m. Herz- oder nierenförmige Blätter, unterseits nur in Achseln behaart (Unterschied zur Sommer-Linde). Wichtige Bienenweide (Lindenblütenhonig). Klassischer Stadtbaum und Alleebaum.",
   },
   {
@@ -641,7 +578,6 @@ const PLANTS = [
     family: "Adoxaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 77950,
     description: "Blütezeit: April–Mai. Blütefarbe: Cremeweiß, in flachen Dolden. Strauch bis 4 m. Charakteristisch: Filzig-wollig behaarte Blätter und Zweige. Früchte: Erst rot, dann schwarz (für Vögel wertvoll). Herbstfärbung dunkelrot. Trockenheitsverträglich.",
   },
   {
@@ -651,7 +587,6 @@ const PLANTS = [
     family: "Adoxaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 77949,
     description: "Blütezeit: Mai. Blütefarbe: Cremeweiß, in flachen Dolden. Immergrüner Strauch bis 4 m. Große, runzlige, ledrige Blätter (oberseits dunkelgrün, unterseits graufilzig). Früchte: Erst rot, dann schwarz. Windgeschützter Standort. Guter Sichtschutz.",
   },
   {
@@ -661,7 +596,6 @@ const PLANTS = [
     family: "Adoxaceae",
     category: "Laubgehölze",
     zwischenpruefung: false,
-    iNaturalistId: 77944,
     description: "Blütezeit: Oktober–März (Winterblüher). Blütefarbe: Kräftig rosa bis weiß, sehr intensiv duftend. Aufrechter Strauch bis 3 m. Blüht auch bei Frost. Einer der wertvollsten Winterblüher im Garten. Laubabwerfend. Früchte: Rote Steinfrüchte.",
   },
   {
@@ -671,7 +605,6 @@ const PLANTS = [
     family: "Apocynaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 56062,
     description: "Blütezeit: März–Mai, gelegentlich Nachblüte im Herbst. Blütefarbe: Blau-violett, selten weiß oder rot. Immergrüner, kriechender Bodendecker bis 20 cm. Breitet sich durch Ausläufer flächig aus. Gut für schattige Standorte unter Bäumen. Alle Teile leicht giftig.",
   },
   {
@@ -681,7 +614,6 @@ const PLANTS = [
     family: "Caprifoliaceae",
     category: "Laubgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 78440,
     description: "Blütezeit: Mai–Juni. Blütefarbe: Rosa, rot, weiß oder zweifarbig je nach Sorte. Vielstämmiger Strauch bis 3 m. Trichterförmige Blüten, von Hummeln und Bienen geliebt. Sorten mit buntem oder dunkelrotem Laub. Rückschnitt nach der Blüte.",
   },
 
@@ -693,7 +625,6 @@ const PLANTS = [
     family: "Pinaceae",
     category: "Nadelgehölze",
     zwischenpruefung: false,
-    iNaturalistId: 135813,
     description: "Blütezeit: Mai. Blütefarbe: Gelb-grün (Zapfenblüten). Großer Baum bis 60 m. Charakteristisch: Nicht stechende, glänzend dunkelgrüne Nadeln, unterseits zwei weiße Streifen. Beliebtester Weihnachtsbaum in Deutschland. Zapfen aufrecht, zerfallen am Baum.",
   },
   {
@@ -703,7 +634,6 @@ const PLANTS = [
     family: "Pinaceae",
     category: "Nadelgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 135782,
     description: "Blütezeit: Oktober–November. Blütefarbe: Grünlich, unscheinbar. Großer Baum bis 40 m. Charakteristisch: Stahlblaue kurze Nadeln in Quirlen, weit ausladende Silhouette. Zapfen aufrecht auf den Ästen, zerfallen am Baum. Eindrucksvoller Parkbaum.",
   },
   {
@@ -713,7 +643,6 @@ const PLANTS = [
     family: "Cupressaceae",
     category: "Nadelgehölze",
     zwischenpruefung: false,
-    iNaturalistId: 135847,
     description: "Blütezeit: März–April. Blütefarbe: Rötlich, unscheinbar. Immergrüner, säulenförmiger Baum bis 10 m. Bläulich-grünes Schuppenlaub. Scheinzypresse mit engem, aufrechtem Wuchs. Gute Heckenpflanze, verträgt Schnitt. Für feuchte Böden geeignet.",
   },
   {
@@ -723,7 +652,6 @@ const PLANTS = [
     family: "Cupressaceae",
     category: "Nadelgehölze",
     zwischenpruefung: false,
-    iNaturalistId: 135846,
     description: "Blütezeit: März–April, selten. Immergrüner Zwergstrauch, wächst sehr langsam, bis 2 m. Charakteristisch: Muschelartig angeordnete dunkelgrüne Zweige. Konischer Wuchs. Ideal für Steingärten, Kübel und Zwerggärten.",
   },
   {
@@ -733,7 +661,6 @@ const PLANTS = [
     family: "Ginkgoaceae",
     category: "Nadelgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 55648,
     description: "Blütezeit: April–Mai. Blütefarbe: Gelblich, unscheinbar. Baum bis 40 m. Lebendes Fossil – einziger Vertreter der Klasse Ginkgopsida. Charakteristisch: Fächerförmige Blätter mit geteilter Mitte. Zweihäusig: Weibliche Bäume tragen übelriechende Früchte. Goldgelbe Herbstfärbung.",
   },
   {
@@ -743,7 +670,6 @@ const PLANTS = [
     family: "Cupressaceae",
     category: "Nadelgehölze",
     zwischenpruefung: false,
-    iNaturalistId: 135813,
     description: "Blütezeit: Mai. Blütefarbe: Gelblich, unscheinbar. Strauch oder Baum bis 10 m, sehr variabel. Stechende Nadeln in Dreierquirlen. Früchte: Wacholderbeeren (eigentlich Zapfenbeeren), 2–3 Jahre reifend. Wichtiges Gewürz. Trockenstandorte, Heiden.",
   },
   {
@@ -753,7 +679,6 @@ const PLANTS = [
     family: "Pinaceae",
     category: "Nadelgehölze",
     zwischenpruefung: false,
-    iNaturalistId: 135801,
     description: "Blütezeit: März–April. Blütefarbe: Rötlich (weiblich) und gelb (männlich). Baum bis 50 m. Einzige heimische Nadelbaumart, die ihr Laub im Herbst verliert (laubabwerfend). Hellgrüne Nadeln im Frühjahr, goldgelbe Herbstfärbung. Sehr hart und langlebig.",
   },
   {
@@ -763,7 +688,6 @@ const PLANTS = [
     family: "Pinaceae",
     category: "Nadelgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 135812,
     description: "Blütezeit: Mai. Blütefarbe: Rot (weiblich) / gelb (männlich). Schlank-säulenförmiger Baum bis 30 m. Charakteristisch: Hängende Seitenäste, schmal kegelförmige Krone. Nadeln oben dunkelgrün, unten zwei weiße Streifen. Sehr robust, stadtklimafest, windresistent.",
   },
   {
@@ -773,7 +697,6 @@ const PLANTS = [
     family: "Pinaceae",
     category: "Nadelgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 135817,
     description: "Blütezeit: Mai. Blütefarbe: Rot (weiblich) / gelb (männlich). Baum bis 30 m. Charakteristisch: Stechende, blau-grüne bis silberblaue Nadeln (Sorte 'Glauca'). Kegel- bis säulenförmiger Wuchs. Aus Nordamerika. Sehr beliebter Zierbaum.",
   },
   {
@@ -783,7 +706,6 @@ const PLANTS = [
     family: "Pinaceae",
     category: "Nadelgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 135793,
     description: "Blütezeit: Mai–Juni. Blütefarbe: Gelb (Pollenzapfen). Baum bis 40 m. Charakteristisch: Rötliche Borke im Kronenbereich, blaug-grüne Nadeln paarweise. Zapfen 3–5 cm lang. Pionierbaum auf Sandböden. Holz vielseitig verwendbar.",
   },
   {
@@ -793,7 +715,6 @@ const PLANTS = [
     family: "Pinaceae",
     category: "Nadelgehölze",
     zwischenpruefung: false,
-    iNaturalistId: 135794,
     description: "Blütezeit: Mai–Juni. Blütefarbe: Gelb. Baum bis 40 m. Charakteristisch: Dunkle, tief gefurchte Borke, kräftige dunkelgrüne Nadeln paarweise (länger als bei Waldkiefer). Sehr trockenheitsresistent. Stadtklimafest. Kalkverträglich.",
   },
   {
@@ -803,7 +724,6 @@ const PLANTS = [
     family: "Taxaceae",
     category: "Nadelgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 135797,
     description: "Blütezeit: März–April. Blütefarbe: Gelblich (männlich). Strauch oder Baum bis 20 m. Charakteristisch: Flache, dunkelgrüne Nadeln; leuchtend rote Becher-Früchte (Arillus). Fast alle Teile stark giftig (außer rotem Fruchtfleisch). Sehr schattentolerant, langlebig bis 3000 Jahre. Beste Schnitthecke.",
   },
   {
@@ -813,7 +733,6 @@ const PLANTS = [
     family: "Taxaceae",
     category: "Nadelgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 135799,
     description: "Blütezeit: März–April. Blütefarbe: Gelblich. Streng säulenförmige Form der Eibe, bis 8 m hoch und nur 1 m breit. Immergrün, giftig wie die Stammart. Hervorragend für formale Gärten, als Solitär oder Reihengehölz. Sehr langsam wachsend.",
   },
   {
@@ -823,7 +742,6 @@ const PLANTS = [
     family: "Cupressaceae",
     category: "Nadelgehölze",
     zwischenpruefung: true,
-    iNaturalistId: 135828,
     description: "Blütezeit: April. Blütefarbe: Gelblich, unscheinbar. Immergrüner Baum bis 20 m. Schuppenartiges, aromatisch duftendes Laub in flachen Wedeln. Beliebteste Heckenpflanze in Deutschland (Thujenhecke). Sehr schnittverträglich. Holz aromatisch und witterungsbeständig.",
   },
   {
@@ -833,7 +751,6 @@ const PLANTS = [
     family: "Pinaceae",
     category: "Nadelgehölze",
     zwischenpruefung: false,
-    iNaturalistId: 135821,
     description: "Blütezeit: April–Mai. Blütefarbe: Gelblich. Baum bis 30 m mit elegant hängenden Zweigen und hängender Triebspitze. Kurze, unterschiedlich lange Nadeln, unterseits zwei weiße Streifen. Verträgt Schatten. Kleine Zapfen (1–2 cm). Benötigt frische Böden.",
   },
 
@@ -845,7 +762,6 @@ const PLANTS = [
     family: "Ranunculaceae",
     category: "Kletterpflanzen",
     zwischenpruefung: true,
-    iNaturalistId: 56058,
     description: "Blütezeit: Je nach Sorte Mai–September. Blütefarbe: Violett, blau, rot, weiß, rosa, pink. Kletternd mit Blattstiel-Ranken bis 5 m. Einteilung in Schnittgruppen (1, 2, 3) für Rückschnitt wichtig. Sehr viele Sorten. Wurzel im Schatten, Triebe in Sonne.",
   },
   {
@@ -855,7 +771,6 @@ const PLANTS = [
     family: "Polygonaceae",
     category: "Kletterpflanzen",
     zwischenpruefung: true,
-    iNaturalistId: 56068,
     description: "Blütezeit: Juli–Oktober. Blütefarbe: Weiß bis hellrosa, in großen Rispen. Sehr schnellwüchsige Kletterpflanze, bis 10 m pro Jahr. Kann große Flächen überwuchern – daher regelmäßiger Rückschnitt nötig. Für schnelle Begrünung von Zäunen und Pergolen.",
   },
   {
@@ -865,7 +780,6 @@ const PLANTS = [
     family: "Araliaceae",
     category: "Kletterpflanzen",
     zwischenpruefung: true,
-    iNaturalistId: 56060,
     description: "Blütezeit: September–Oktober (an älteren Trieben). Blütefarbe: Gelblich-grün, unscheinbar. Immergrüne Kletterpflanze mit Haftscheiben bis 20 m. Zweiformige Pflanze: Jugendform mit gelappten Blättern, Altersform mit ovalen Blättern und Blüten. Wichtige Nahrung für Spätherbstinsekten. Alle Teile giftig.",
   },
   {
@@ -875,7 +789,6 @@ const PLANTS = [
     family: "Hydrangeaceae",
     category: "Kletterpflanzen",
     zwischenpruefung: true,
-    iNaturalistId: 78076,
     description: "Blütezeit: Juni–Juli. Blütefarbe: Weiß, in flachen Tellerdolden mit sterilen Randblüten. Klettert mit Haftwurzeln bis 15 m. Langsam wachsend in den ersten Jahren. Verträgt Schatten und Nordwände. Blüht auch im Halbschatten. Laubabwerfend.",
   },
   {
@@ -885,7 +798,6 @@ const PLANTS = [
     family: "Vitaceae",
     category: "Kletterpflanzen",
     zwischenpruefung: false,
-    iNaturalistId: 78229,
     description: "Blütezeit: Juni–Juli. Blütefarbe: Grünlich, unscheinbar. Klettert mit Haftscheiben bis 20 m selbstständig. Herbstfärbung: Leuchtend scharlachrot (einer der schönsten Herbstziergehölze). Früchte: Blauschwarze, giftige Beeren. Für Fassadenbegrünung.",
   },
   {
@@ -895,7 +807,6 @@ const PLANTS = [
     family: "Fabaceae",
     category: "Kletterpflanzen",
     zwischenpruefung: false,
-    iNaturalistId: 57141,
     description: "Blütezeit: Mai (vor dem Blattaustrieb). Blütefarbe: Blau-violett, in langen hängenden Trauben bis 30 cm, stark duftend. Verholzende Schlingpflanze bis 20 m. Benötigt stabiles Gerüst. Regelmäßiger Sommerschnitt für gute Blütenbildung. Alle Teile leicht giftig.",
   },
 
@@ -907,7 +818,6 @@ const PLANTS = [
     family: "Asteraceae",
     category: "Stauden",
     zwischenpruefung: false,
-    iNaturalistId: 56066,
     description: "Blütezeit: Juni–September. Blütefarbe: Leuchtend gelb, in flachen Doldenrispen. Staude bis 1,2 m. Aromatisch duftend. Sehr trockenheitsresistent. Blüten gut zum Trocknen geeignet (Trockengesteck). Gut für Schmetterlinge und Bienen.",
   },
   {
@@ -917,7 +827,6 @@ const PLANTS = [
     family: "Ranunculaceae",
     category: "Stauden",
     zwischenpruefung: false,
-    iNaturalistId: 48460,
     description: "Blütezeit: Juni–August. Blütefarbe: Dunkelblau-violett, helmartige Blüten. Staude bis 1,5 m. Achtung: Stärkste giftige Pflanze Europas (alle Teile, besonders Knollen). Für Staudenrabatten mit hohem Effekt. Bei Gartenarbeit Handschuhe tragen.",
   },
   {
@@ -927,7 +836,6 @@ const PLANTS = [
     family: "Rosaceae",
     category: "Stauden",
     zwischenpruefung: true,
-    iNaturalistId: 56040,
     description: "Blütezeit: Mai–August. Blütefarbe: Gelblich-grün, in locker-schaumigen Rispen. Staude bis 50 cm. Charakteristisch: Große, gerundete, gefaltet-gerippte Blätter, die Wassertropfen perlen lassen (Lotuseffekt). Vielseitig verwendbar als Rabatten-Einfassung. Gut kombinierbar.",
   },
   {
@@ -937,7 +845,6 @@ const PLANTS = [
     family: "Saxifragaceae",
     category: "Stauden",
     zwischenpruefung: false,
-    iNaturalistId: 56048,
     description: "Blütezeit: Juni–August. Blütefarbe: Weiß, rosa, rot, lila je nach Sorte, in fedrigen Rispen. Staude bis 1,2 m. Bevorzugt feuchte, schattige Standorte. Attraktives Blattwerk, auch außerhalb der Blütezeit dekorativ. Braune Samenstände im Winter schön.",
   },
   {
@@ -947,7 +854,6 @@ const PLANTS = [
     family: "Saxifragaceae",
     category: "Stauden",
     zwischenpruefung: true,
-    iNaturalistId: 56055,
     description: "Blütezeit: März–April (Frühjahrsblüher). Blütefarbe: Rosa bis purpurrot. Immergrüne Staude bis 40 cm. Große, ledrige, herzförmige Blätter, rötlich im Winter. Sehr robust, wächst auch im Schatten. Eines der wenigen Wintergrünen im Schatten.",
   },
   {
@@ -957,7 +863,6 @@ const PLANTS = [
     family: "Cyperaceae",
     category: "Stauden",
     zwischenpruefung: true,
-    iNaturalistId: 161893,
     description: "Blütezeit: April–Mai. Blütefarbe: Grünlich, unscheinbar. Immergrünes Ziergras bis 40 cm, horstig wachsend. Schmal-linealische, dunkelgrüne Blätter. Sehr schattenverträglich. Guter Bodendecker unter Gehölzen. Viele Sorten mit weißem oder gelbem Blattrand.",
   },
   {
@@ -967,7 +872,6 @@ const PLANTS = [
     family: "Ranunculaceae",
     category: "Stauden",
     zwischenpruefung: true,
-    iNaturalistId: 56063,
     description: "Blütezeit: Juni–August, Nachblüte im September. Blütefarbe: Blau, violett, weiß, rosa. Staude bis 2 m. Eindrucksvoller Hochstauden-Klassiker. Alle Teile giftig. Benötigt Stütze bei Wind. Nach erster Blüte zurückschneiden für Nachblüte. Symbol des englischen Cottage-Gartens.",
   },
   {
@@ -977,7 +881,6 @@ const PLANTS = [
     family: "Plantaginaceae",
     category: "Stauden",
     zwischenpruefung: false,
-    iNaturalistId: 56064,
     description: "Blütezeit: Juni–August (2. Jahr). Blütefarbe: Purpur-rosa mit dunklen Flecken innen, röhrenförmig. Zweijährige Staude bis 1,5 m. Alle Teile stark giftig (Herzglykoside, Ursprung für Digitalis-Medikamente). Selbst aussäend. Waldrand- und Schattenrabatte.",
   },
   {
@@ -987,7 +890,6 @@ const PLANTS = [
     family: "Asteraceae",
     category: "Stauden",
     zwischenpruefung: true,
-    iNaturalistId: 56070,
     description: "Blütezeit: Juli–September. Blütefarbe: Purpurrosa mit orange-braunem, stacheligem Mittelkegel. Staude bis 1,2 m. Sehr wertvolle Bienenweide und Schmetterlingsmagnet. Samenstände für Vögel im Winter stehen lassen. Auch medizinisch verwendet (Immunstärkung).",
   },
   {
@@ -997,7 +899,6 @@ const PLANTS = [
     family: "Geraniaceae",
     category: "Stauden",
     zwischenpruefung: true,
-    iNaturalistId: 56071,
     description: "Blütezeit: Mai–Juli. Blütefarbe: Rosa bis purpurrosa. Halbimmergrüne Staude bis 40 cm. Aromatisch duftende Blätter. Sehr robuster Bodendecker auch unter Gehölzen. Herbstfärbung rötlich. Sehr trockenheitsverträglich. Ideal für schwierige Standorte.",
   },
   {
@@ -1007,7 +908,6 @@ const PLANTS = [
     family: "Saxifragaceae",
     category: "Stauden",
     zwischenpruefung: false,
-    iNaturalistId: 56078,
     description: "Blütezeit: Juni–Juli. Blütefarbe: Weiß bis cremeweiß, sehr klein, in lockeren Rispen. Immergrüne Staude bis 60 cm Blütenstand. Viele Sorten mit buntem Laub (silber, purpur, bronze, karamell). Dekorativ v.a. durch Blattfarbe. Halbschattige Standorte.",
   },
   {
@@ -1017,7 +917,6 @@ const PLANTS = [
     family: "Asparagaceae",
     category: "Stauden",
     zwischenpruefung: false,
-    iNaturalistId: 56083,
     description: "Blütezeit: Juli–August. Blütefarbe: Lila, weiß je nach Sorte, glockig. Staude bis 80 cm. Charakteristisch: Große, dekorative Blätter in grün, blaugrün, gelb, bunt. Klassische Schattenpflanze. Schneckenempfindlich. Viele Sorten von mini bis riesig. Herbst: Blätter welken gelb.",
   },
   {
@@ -1027,7 +926,6 @@ const PLANTS = [
     family: "Lamiaceae",
     category: "Stauden",
     zwischenpruefung: true,
-    iNaturalistId: 56088,
     description: "Blütezeit: Juni–August. Blütefarbe: Blau-violett, in ährigen Blütenständen. Halbstrauch bis 80 cm. Intensiv duftend. Trockenheits- und hitzefest. Mediterraner Charakter. Bienenmagnet. Nach der Blüte zurückschneiden. Nicht ins alte Holz schneiden. Blüten zum Trocknen geeignet.",
   },
   {
@@ -1037,7 +935,6 @@ const PLANTS = [
     family: "Lamiaceae",
     category: "Stauden",
     zwischenpruefung: false,
-    iNaturalistId: 56107,
     description: "Blütezeit: Mai–September (sehr lange Blüte). Blütefarbe: Blau-violett, in Scheinähren. Staude bis 50 cm. Silbergrau behaarte Blätter, aromatisch duftend. Katzen lieben diese Pflanze. Bienen- und Schmetterlingsmagnet. Rückschnitt nach erster Blüte für Neuaustrieb.",
   },
   {
@@ -1047,7 +944,6 @@ const PLANTS = [
     family: "Primulaceae",
     category: "Stauden",
     zwischenpruefung: true,
-    iNaturalistId: 56116,
     description: "Blütezeit: März–April (früher Frühjahrsblüher). Blütefarbe: Gelb (wild), alle Farben (Kulturformen). Staude bis 20 cm. Frühlingsbote. Zweiformige Blüten (Heterostylie). Aus Garten-Sorten gezüchtet: Bunte Topfprimeln. Gut für Bienen im Frühjahr. Feucht-humose Standorte.",
   },
   {
@@ -1057,7 +953,6 @@ const PLANTS = [
     family: "Asteraceae",
     category: "Stauden",
     zwischenpruefung: false,
-    iNaturalistId: 56130,
     description: "Blütezeit: August–Oktober (Spätsommer-Blüher). Blütefarbe: Leuchtend gelb mit schwarzem Mittelkegel. Staude bis 80 cm. Ausdauernder, zuverlässiger Blüher. Gute Bienenweide im Spätsommer. Samenstände für Vögel stehen lassen. Sonnige, warme Standorte bevorzugt.",
   },
   {
@@ -1067,7 +962,6 @@ const PLANTS = [
     family: "Crassulaceae",
     category: "Stauden",
     zwischenpruefung: true,
-    iNaturalistId: 56137,
     description: "Blütezeit: August–September. Blütefarbe: Purpurrosa bis dunkelrot. Sukkulent-artige Staude bis 60 cm. Fleischige, grau-grüne Blätter. Sehr trockenheitsresistent. Schmetterlings- und Bienenmagnet. Braune Samenstände dekorativ im Winter. Für trockene, sonnige Standorte.",
   },
   {
@@ -1077,7 +971,6 @@ const PLANTS = [
     family: "Rosaceae",
     category: "Stauden",
     zwischenpruefung: true,
-    iNaturalistId: 56145,
     description: "Blütezeit: April–Mai. Blütefarbe: Leuchtend gelb, erdbeerähnliche Blüten. Immergrüner Bodendecker bis 20 cm. Dreizählige, glänzende Blätter (ähnlich Erdbeere). Bildet dichte Matten durch Ausläufer. Sehr schattenverträglich. Pflegeleich und konkurrenzstark.",
   },
 
@@ -1089,7 +982,6 @@ const PLANTS = [
     family: "Iridaceae",
     category: "Zwiebelpflanzen",
     zwischenpruefung: true,
-    iNaturalistId: 56210,
     description: "Blütezeit: Februar–April (frühester Frühjahrsbote). Blütefarbe: Violett, weiß, gelb, gestreift. Zwiebelstaude bis 15 cm. Pflanzdepth: 5–8 cm. Verbreitung: Einbürgert sich gerne in Rasenflächen (Krokuswiese). Wichtige frühe Bienennahrung.",
   },
   {
@@ -1099,7 +991,6 @@ const PLANTS = [
     family: "Amaryllidaceae",
     category: "Zwiebelpflanzen",
     zwischenpruefung: false,
-    iNaturalistId: 56215,
     description: "Blütezeit: Januar–März (erster Frühjahrsblüher). Blütefarbe: Weiß mit grünen Flecken an den inneren Blütenblättern. Kleine Zwiebelpflanze bis 20 cm. Symbol des Frühlings. Alle Teile giftig (Galantamin). Verbreitet sich durch Tochterzwiebeln. Schattiger bis halbschattiger Standort.",
   },
   {
@@ -1109,7 +1000,6 @@ const PLANTS = [
     family: "Amaryllidaceae",
     category: "Zwiebelpflanzen",
     zwischenpruefung: true,
-    iNaturalistId: 56220,
     description: "Blütezeit: März–April. Blütefarbe: Gelb, mit langer Coronarröhre. Zwiebelpflanze bis 40 cm. Einheimische Wildform. Alle Teile giftig (Lycorin). Naturalisiert sich in Wiesen. Frühjahrsblüher der Wiesen und Parks. Klassischer Osterschmuck.",
   },
   {
@@ -1119,7 +1009,6 @@ const PLANTS = [
     family: "Liliaceae",
     category: "Zwiebelpflanzen",
     zwischenpruefung: true,
-    iNaturalistId: 56226,
     description: "Blütezeit: März–Mai (je nach Sorte früh bis spät). Blütefarbe: Alle Farben außer echtem Blau und Schwarz. Zwiebelpflanze bis 70 cm. Pflanzung: Herbst (Oktober–November), 10–15 cm tief. Viele Formen: Einfach, gefüllt, Papageien, Feder, Viridiflora. Aus Zentralasien/Türkei stammend.",
   },
 
@@ -1131,7 +1020,6 @@ const PLANTS = [
     family: "Apiaceae",
     category: "Wildkräuter",
     zwischenpruefung: false,
-    iNaturalistId: 56235,
     description: "Blütezeit: Mai–Juli. Blütefarbe: Weiß, in flachen Dolden. Ausdauernde Staude bis 60 cm. Kriecht durch unterirdische Wurzelausläufer – sehr schwer zu bekämpfen. Typisches Problem in Staudenbeeten. Junge Blätter essbar (bärlauchähnlicher Geruch). Waldrandpflanze.",
   },
   {
@@ -1141,7 +1029,6 @@ const PLANTS = [
     family: "Chenopodiaceae",
     category: "Wildkräuter",
     zwischenpruefung: false,
-    iNaturalistId: 56240,
     description: "Blütezeit: Juli–Oktober. Blütefarbe: Grünlich, unscheinbar. Einjähriges Unkraut bis 80 cm. Spiessförmige Blätter mit mehligem Belag. Typisches Ackerunkraut auf nährstoffreichen Böden. Junge Blätter essbar (spinatähnlich). Zeigerpflanze für stickstoffreiche Böden.",
   },
   {
@@ -1151,7 +1038,6 @@ const PLANTS = [
     family: "Asteraceae",
     category: "Wildkräuter",
     zwischenpruefung: true,
-    iNaturalistId: 56242,
     description: "Blütezeit: März–November (fast das ganze Jahr). Blütefarbe: Weiß mit gelbem Mittelkegel, Randblüten oft rötlich angehaucht. Staude bis 15 cm. Typisches Rasenunkraut. Zeiger für verdichtete, regelmäßig gemähte Rasenflächen. In Kulturformen als Zierpflanze verwendet.",
   },
   {
@@ -1161,7 +1047,6 @@ const PLANTS = [
     family: "Asteraceae",
     category: "Wildkräuter",
     zwischenpruefung: false,
-    iNaturalistId: 56250,
     description: "Blütezeit: Juli–September. Blütefarbe: Rosaviolett. Ausdauernde Staude bis 1,2 m. Zweihäusig. Kriecht durch tiefe Wurzelausläufer – sehr schwer zu bekämpfen. Stachelige Blätter. Zweijährige bis ausdauernde Problemunkraut. Zeiger für gestörte Böden.",
   },
   {
@@ -1171,7 +1056,6 @@ const PLANTS = [
     family: "Convolvulaceae",
     category: "Wildkräuter",
     zwischenpruefung: false,
-    iNaturalistId: 56255,
     description: "Blütezeit: Juni–September. Blütefarbe: Weiß bis rosa, trichterförmig. Windende Staude mit tiefen Pfahlwurzeln. Schlingt sich um Kulturpflanzen. Sehr trockenheitsresistent durch tiefe Wurzeln. Schwer zu bekämpfen, da Wurzelausläufer bis 5 m tief.",
   },
   {
@@ -1181,7 +1065,6 @@ const PLANTS = [
     family: "Poaceae",
     category: "Wildkräuter",
     zwischenpruefung: true,
-    iNaturalistId: 56260,
     description: "Blütezeit: Juni–August. Blütefarbe: Grünlich, Ähren. Ausdauerndes Gras bis 1,2 m. Kriecht durch weißliche Wurzelausläufer (Rhizome). Schwerstes Dauerunkraut in Beeten. Mechanisch schwer zu bekämpfen – jedes Rhizomstück treibt neu aus. Zeigerpflanze für nährstoffreiche Böden.",
   },
   {
@@ -1191,7 +1074,6 @@ const PLANTS = [
     family: "Equisetaceae",
     category: "Wildkräuter",
     zwischenpruefung: true,
-    iNaturalistId: 56263,
     description: "Blütezeit: März–April (Sporentriebe). Ausdauernde Sporenpflanze bis 50 cm. Zwei Triebformen: Sporentragende Frühjahrstriebe (braun) und sterile Sommertriebe (grün). Tiefe Rhizome bis 1,5 m. Kaum bekämpfbar. Zeiger für verdichtete, nasse, saure Böden.",
   },
   {
@@ -1201,7 +1083,6 @@ const PLANTS = [
     family: "Asteraceae",
     category: "Wildkräuter",
     zwischenpruefung: false,
-    iNaturalistId: 56268,
     description: "Blütezeit: Mai–Oktober. Blütefarbe: Weiß mit gelbem Mittelpunkt, sehr klein. Einjähriges Unkraut bis 60 cm. Mehrere Generationen pro Jahr möglich. Sehr samenproduktionstark. Wärmeliebendes Unkraut in Gemüsegärten. Aus Südamerika eingeschleppt (Neophyt).",
   },
   {
@@ -1211,7 +1092,6 @@ const PLANTS = [
     family: "Asteraceae",
     category: "Wildkräuter",
     zwischenpruefung: false,
-    iNaturalistId: 56280,
     description: "Blütezeit: Januar–Dezember (ganzjährig bei mildem Wetter). Blütefarbe: Gelb (keine Zungenblüten). Ein- bis zweijähriges Unkraut bis 30 cm. Sehr kurze Vegetationszeit (5–7 Wochen). Viele Generationen pro Jahr. Häufig in Töpfen und Kästen. Leicht giftig.",
   },
   {
@@ -1221,7 +1101,6 @@ const PLANTS = [
     family: "Caryophyllaceae",
     category: "Wildkräuter",
     zwischenpruefung: true,
-    iNaturalistId: 56285,
     description: "Blütezeit: Februar–Oktober (fast ganzjährig). Blütefarbe: Weiß, sehr klein (tief gespaltene Blütenblätter). Niederliegend-aufsteigendes einjähriges Unkraut bis 40 cm. Bevorzugt kühle, feuchte Bedingungen. Frühjahrs- und Herbstunkraut in Beeten. Essbar als Salat.",
   },
   {
@@ -1231,7 +1110,6 @@ const PLANTS = [
     family: "Asteraceae",
     category: "Wildkräuter",
     zwischenpruefung: true,
-    iNaturalistId: 56288,
     description: "Blütezeit: März–Mai, Nachblüte Oktober. Blütefarbe: Leuchtend gelb. Ausdauernde Staude bis 40 cm. Tiefe Pfahlwurzel. Wächst auch im Rasen – Zeiger für verdichteten Boden. Alle Teile essbar. Wichtige frühe Bienenweide. Früchte durch Wind verbreitet (Fallschirmflieger).",
   },
   {
@@ -1241,7 +1119,6 @@ const PLANTS = [
     family: "Urticaceae",
     category: "Wildkräuter",
     zwischenpruefung: true,
-    iNaturalistId: 56293,
     description: "Blütezeit: Juni–August. Blütefarbe: Grünlich, unscheinbar. Ausdauernde Staude bis 1,5 m. Charakteristisch: Brennhaare mit Ameisensäure. Zweihäusig. Kriecht durch Rhizome. Nährpflanze für viele Schmetterlingsraupen. Junge Triebe essbar. Zeiger für stickstoffreiche Böden.",
   },
   {
@@ -1251,7 +1128,6 @@ const PLANTS = [
     family: "Urticaceae",
     category: "Wildkräuter",
     zwischenpruefung: true,
-    iNaturalistId: 56294,
     description: "Blütezeit: März–Oktober. Blütefarbe: Grünlich, unscheinbar. Einjähriges Unkraut bis 50 cm. Einhäusig (im Gegensatz zur Großen Brennnessel). Brennt stärker als die Große Brennnessel. Typisches Gartenunkraut auf nährstoffreichen, gestörten Böden.",
   },
 ];

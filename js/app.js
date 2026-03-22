@@ -48,19 +48,40 @@ function getPlantStatus(id) {
 const imgCache = {};
 
 async function fetchPlantImage(plant) {
-  if (imgCache[plant.id]) return imgCache[plant.id];
+  if (imgCache[plant.id] !== undefined) return imgCache[plant.id];
+
+  // Botanischen Namen bereinigen:
+  // 1. Kultivarnamen in einfachen Anführungszeichen entfernen: 'Atropurpurea'
+  // 2. Das Wort "Cultivars" entfernen
+  // 3. Unterart-Kürzel (ssp., var., f.) mit Rest entfernen für sauberere Suche
+  let searchName = plant.botanicalName
+    .replace(/\s*'[^']*'/g, "")       // 'Cultivar' entfernen
+    .replace(/\s+Cultivars?$/i, "")    // "Cultivars" am Ende entfernen
+    .replace(/\s+(ssp\.|subsp\.|var\.|f\.)\s+\S+/g, "") // ssp./var. entfernen
+    .trim();
+
+  // Wenn nur noch eine Wort übrig (Gattung), auf Genus-Ebene suchen
+  const parts = searchName.split(/\s+/);
+  const rank = parts.length === 1 ? "genus" : "species";
+
   try {
-    const url = `https://api.inaturalist.org/v1/taxa/${plant.iNaturalistId}?locale=de`;
+    const url =
+      `https://api.inaturalist.org/v1/taxa` +
+      `?q=${encodeURIComponent(searchName)}` +
+      `&rank=${rank}` +
+      `&per_page=1` +
+      `&is_active=true`;
+
     const res = await fetch(url);
     if (!res.ok) throw new Error("not ok");
     const data = await res.json();
-    const photo = data.results?.[0]?.default_photo?.medium_url;
-    if (photo) {
-      imgCache[plant.id] = photo;
-      return photo;
-    }
-  } catch (_) {}
-  return null;
+    const photo = data.results?.[0]?.default_photo?.medium_url || null;
+    imgCache[plant.id] = photo;
+    return photo;
+  } catch (_) {
+    imgCache[plant.id] = null;
+    return null;
+  }
 }
 
 // ─── Router ──────────────────────────────────────────────────────────────────
