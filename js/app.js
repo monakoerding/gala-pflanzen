@@ -44,44 +44,63 @@ function getPlantStatus(id) {
   return p[id]?.status || "new";
 }
 
-// ─── iNaturalist image cache ──────────────────────────────────────────────────
-const imgCache = {};
+// ─── iNaturalist image cache (in-memory + localStorage) ──────────────────────
+const IMG_CACHE_KEY = "galabau_imgcache_v2";
+const imgCache = (() => {
+  try {
+    return JSON.parse(localStorage.getItem(IMG_CACHE_KEY)) || {};
+  } catch {
+    return {};
+  }
+})();
+
+function saveImgCache() {
+  try {
+    localStorage.setItem(IMG_CACHE_KEY, JSON.stringify(imgCache));
+  } catch (_) {
+    localStorage.removeItem(IMG_CACHE_KEY);
+  }
+}
+
+async function fetchFromiNat(taxonId) {
+  const res = await fetch(`https://api.inaturalist.org/v1/taxa/${taxonId}`);
+  if (!res.ok) throw new Error("inat error");
+  const data = await res.json();
+  return data.results?.[0]?.default_photo?.medium_url || null;
+}
+
+async function fetchFromWiki(title) {
+  const url =
+    `https://en.wikipedia.org/api/rest_v1/page/summary/` +
+    encodeURIComponent(title);
+  const res = await fetch(url);
+  if (!res.ok) throw new Error("wiki error");
+  const data = await res.json();
+  // Bevorzuge originalimage (höhere Qualität), fallback auf thumbnail
+  return data.originalimage?.source || data.thumbnail?.source || null;
+}
 
 async function fetchPlantImage(plant) {
   if (imgCache[plant.id] !== undefined) return imgCache[plant.id];
 
-  // Botanischen Namen bereinigen:
-  // 1. Kultivarnamen in einfachen Anführungszeichen entfernen: 'Atropurpurea'
-  // 2. Das Wort "Cultivars" entfernen
-  // 3. Unterart-Kürzel (ssp., var., f.) mit Rest entfernen für sauberere Suche
-  let searchName = plant.botanicalName
-    .replace(/\s*'[^']*'/g, "")       // 'Cultivar' entfernen
-    .replace(/\s+Cultivars?$/i, "")    // "Cultivars" am Ende entfernen
-    .replace(/\s+(ssp\.|subsp\.|var\.|f\.)\s+\S+/g, "") // ssp./var. entfernen
-    .trim();
-
-  // Wenn nur noch eine Wort übrig (Gattung), auf Genus-Ebene suchen
-  const parts = searchName.split(/\s+/);
-  const rank = parts.length === 1 ? "genus" : "species";
+  const taxon = TAXON_IDS[plant.id] || {};
+  let photo = null;
 
   try {
-    const url =
-      `https://api.inaturalist.org/v1/taxa` +
-      `?q=${encodeURIComponent(searchName)}` +
-      `&rank=${rank}` +
-      `&per_page=1` +
-      `&is_active=true`;
+    if (taxon.preferWiki && taxon.wiki) {
+      // Kultivare: Wikipedia zuerst (sortenspezifisches Bild)
+      photo = await fetchFromWiki(taxon.wiki).catch(() => null);
+      if (!photo && taxon.inat) photo = await fetchFromiNat(taxon.inat).catch(() => null);
+    } else {
+      // Normalfall: iNaturalist zuerst, Wikipedia als Fallback
+      if (taxon.inat) photo = await fetchFromiNat(taxon.inat).catch(() => null);
+      if (!photo && taxon.wiki) photo = await fetchFromWiki(taxon.wiki).catch(() => null);
+    }
+  } catch (_) {}
 
-    const res = await fetch(url);
-    if (!res.ok) throw new Error("not ok");
-    const data = await res.json();
-    const photo = data.results?.[0]?.default_photo?.medium_url || null;
-    imgCache[plant.id] = photo;
-    return photo;
-  } catch (_) {
-    imgCache[plant.id] = null;
-    return null;
-  }
+  imgCache[plant.id] = photo;
+  saveImgCache();
+  return photo;
 }
 
 // ─── Router ──────────────────────────────────────────────────────────────────
