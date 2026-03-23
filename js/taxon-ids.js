@@ -8,7 +8,7 @@ const TAXON_IDS = {
   "acer-platanoides":         { inat: 54763 },
   "aesculus-hippocastanum":   { inat: 84298 },
   "amelanchier-lamarckii":    { inat: 1091496 },
-  "berberis-thunbergii-atropurpurea": { wiki: "Berberis thunbergii f. atropurpurea", preferWiki: true, inat: 58727 },
+  "berberis-thunbergii-atropurpurea": { wiki: "Berberis thunbergii", preferWiki: true, inat: 58727 },
   "betula-pendula":           { inat: 83992 },
   "buddleja-cultivars":       { inat: 64571 },
   "buxus-sempervirens":       { inat: 133397 },
@@ -50,7 +50,7 @@ const TAXON_IDS = {
   "pieris-japonica":          { inat: 127181 },
   "platanus-hispanica":       { inat: 552449 },
   "potentilla-fruticosa":     { inat: 76606 },
-  "prunus-cerasifera-nigra":  { wiki: "Prunus cerasifera 'Nigra'", preferWiki: true, inat: 55837 },
+  "prunus-cerasifera-nigra":  { wiki: "Prunus cerasifera", preferWiki: true, inat: 55837 },
   "prunus-laurocerasus":      { inat: 61432 },
   "prunus-serrulata":         { inat: 125742 },
   "quercus-robur":            { inat: 56133 },
@@ -62,7 +62,7 @@ const TAXON_IDS = {
   "salix-alba-tristis":       { inat: 1377466 },
   "sambucus-nigra":           { inat: 765394 },
   "sorbus-aucuparia":         { inat: 56063 },
-  "spiraea-arguta":           { wiki: "Spiraea × arguta" },   // iNat mappt auf falsche Art
+  "spiraea-arguta":           { wiki: "Spiraea arguta" },      // iNat mappt auf falsche Art
   "spiraea-japonica":         { inat: 125790 },
   "spiraea-vanhouttei":       { inat: 171131 },
   "syringa-vulgaris":         { inat: 83072 },
@@ -75,7 +75,7 @@ const TAXON_IDS = {
 
   // ── NADELGEHÖLZE ─────────────────────────────────────────────────────────
   "abies-nordmanniana":       { inat: 136894 },
-  "cedrus-atlantica-glauca":  { wiki: "Cedrus atlantica 'Glauca'", preferWiki: true, inat: 136234 },
+  "cedrus-atlantica-glauca":  { wiki: "Cedrus atlantica", preferWiki: true, inat: 136234 },
   "chamaecyparis-lawsoniana-columnaris": { inat: 76237 },
   "chamaecyparis-obtusa-nana-gracilis":  { inat: 133369 },
   "ginkgo-biloba":            { inat: 64350 },

@@ -45,7 +45,7 @@ function getPlantStatus(id) {
 }
 
 // ─── iNaturalist image cache (in-memory + localStorage) ──────────────────────
-const IMG_CACHE_KEY = "galabau_imgcache_v2";
+const IMG_CACHE_KEY = "galabau_imgcache_v3";
 const imgCache = (() => {
   try {
     return JSON.parse(localStorage.getItem(IMG_CACHE_KEY)) || {};
@@ -66,18 +66,35 @@ async function fetchFromiNat(taxonId) {
   const res = await fetch(`https://api.inaturalist.org/v1/taxa/${taxonId}`);
   if (!res.ok) throw new Error("inat error");
   const data = await res.json();
-  return data.results?.[0]?.default_photo?.medium_url || null;
+  const t = data.results?.[0];
+  // default_photo zuerst, dann erstes Foto aus taxon_photos
+  return (
+    t?.default_photo?.medium_url ||
+    t?.taxon_photos?.[0]?.photo?.medium_url ||
+    null
+  );
 }
 
 async function fetchFromWiki(title) {
-  const url =
-    `https://en.wikipedia.org/api/rest_v1/page/summary/` +
-    encodeURIComponent(title);
-  const res = await fetch(url);
-  if (!res.ok) throw new Error("wiki error");
+  // Wikipedia REST API: Titel mit Unterstrichen, kein encodeURIComponent für /
+  const safeTitle = title.replace(/\s+/g, "_");
+  const res = await fetch(
+    `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(safeTitle)}`
+  );
+  if (!res.ok) return null;
   const data = await res.json();
-  // Bevorzuge originalimage (höhere Qualität), fallback auf thumbnail
-  return data.originalimage?.source || data.thumbnail?.source || null;
+  // thumbnail.source ist am zuverlässigsten (immer vorhanden wenn Artikel Bild hat)
+  return data.thumbnail?.source || data.originalimage?.source || null;
+}
+
+// Botanischen Namen zu Wikipedia-Titel vereinfachen (kein Kultivarteil, kein ×)
+function wikiTitleFromBotanical(botanicalName) {
+  return botanicalName
+    .replace(/\s*'[^']*'/g, "")       // 'Cultivar' entfernen
+    .replace(/\s+Cultivars?$/i, "")    // "Cultivars" entfernen
+    .replace(/\s*[×x]\s+/g, " ")      // × oder x (Hybrid) entfernen
+    .replace(/\s+(ssp\.|subsp\.|var\.|f\.)\s+\S+/g, "") // ssp./var. entfernen
+    .trim();
 }
 
 async function fetchPlantImage(plant) {
@@ -86,19 +103,20 @@ async function fetchPlantImage(plant) {
   const taxon = TAXON_IDS[plant.id] || {};
   let photo = null;
 
-  try {
-    if (taxon.preferWiki && taxon.wiki) {
-      // Kultivare: Wikipedia zuerst (sortenspezifisches Bild)
-      photo = await fetchFromWiki(taxon.wiki).catch(() => null);
-      if (!photo && taxon.inat) photo = await fetchFromiNat(taxon.inat).catch(() => null);
-    } else {
-      // Normalfall: iNaturalist zuerst, Wikipedia als Fallback
-      if (taxon.inat) photo = await fetchFromiNat(taxon.inat).catch(() => null);
-      if (!photo && taxon.wiki) photo = await fetchFromWiki(taxon.wiki).catch(() => null);
-    }
-  } catch (_) {}
+  // Expliziter Wiki-Titel aus taxon-ids.js, sonst aus botanischem Namen ableiten
+  const wikiTitle = taxon.wiki || wikiTitleFromBotanical(plant.botanicalName);
 
-  imgCache[plant.id] = photo;
+  if (taxon.preferWiki) {
+    // Kultivare: erst spezifischer Wiki-Titel, dann iNat, dann generischer Wiki-Titel
+    photo = await fetchFromWiki(wikiTitle);
+    if (!photo && taxon.inat) photo = await fetchFromiNat(taxon.inat).catch(() => null);
+  } else {
+    // Normalfall: iNat zuerst, dann Wiki als Fallback
+    if (taxon.inat) photo = await fetchFromiNat(taxon.inat).catch(() => null);
+    if (!photo)     photo = await fetchFromWiki(wikiTitle);
+  }
+
+  imgCache[plant.id] = photo ?? null;
   saveImgCache();
   return photo;
 }
