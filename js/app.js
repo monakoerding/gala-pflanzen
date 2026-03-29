@@ -44,8 +44,37 @@ function getPlantStatus(id) {
   return p[id]?.status || "new";
 }
 
+// ─── User-uploaded images (localStorage) ─────────────────────────────────────
+const USER_IMGS_KEY = "galabau_userimgs_v1";
+
+function loadUserImages() {
+  try {
+    return JSON.parse(localStorage.getItem(USER_IMGS_KEY)) || {};
+  } catch {
+    return {};
+  }
+}
+
+function saveUserImage(plantId, dataUrl) {
+  const imgs = loadUserImages();
+  imgs[plantId] = dataUrl;
+  try {
+    localStorage.setItem(USER_IMGS_KEY, JSON.stringify(imgs));
+    return true;
+  } catch (_) {
+    alert("Bild konnte nicht gespeichert werden – Speicher voll. Bitte ein kleineres Bild verwenden.");
+    return false;
+  }
+}
+
+function deleteUserImage(plantId) {
+  const imgs = loadUserImages();
+  delete imgs[plantId];
+  localStorage.setItem(USER_IMGS_KEY, JSON.stringify(imgs));
+}
+
 // ─── iNaturalist image cache (in-memory + localStorage) ──────────────────────
-const IMG_CACHE_KEY = "galabau_imgcache_v3";
+const IMG_CACHE_KEY = "galabau_imgcache_v4";
 const imgCache = (() => {
   try {
     return JSON.parse(localStorage.getItem(IMG_CACHE_KEY)) || {};
@@ -64,10 +93,9 @@ function saveImgCache() {
 
 async function fetchFromiNat(taxonId) {
   const res = await fetch(`https://api.inaturalist.org/v1/taxa/${taxonId}`);
-  if (!res.ok) throw new Error("inat error");
+  if (!res.ok) return null;
   const data = await res.json();
   const t = data.results?.[0];
-  // default_photo zuerst, dann erstes Foto aus taxon_photos
   return (
     t?.default_photo?.medium_url ||
     t?.taxon_photos?.[0]?.photo?.medium_url ||
@@ -76,44 +104,82 @@ async function fetchFromiNat(taxonId) {
 }
 
 async function fetchFromWiki(title) {
-  // Wikipedia REST API: Titel mit Unterstrichen, kein encodeURIComponent für /
   const safeTitle = title.replace(/\s+/g, "_");
   const res = await fetch(
     `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(safeTitle)}`
   );
   if (!res.ok) return null;
   const data = await res.json();
-  // thumbnail.source ist am zuverlässigsten (immer vorhanden wenn Artikel Bild hat)
   return data.thumbnail?.source || data.originalimage?.source || null;
 }
 
-// Botanischen Namen zu Wikipedia-Titel vereinfachen (kein Kultivarteil, kein ×)
-function wikiTitleFromBotanical(botanicalName) {
+// Wikimedia Commons: Suche nach Dateinamen im File-Namespace
+async function fetchFromCommons(searchTerm) {
+  const params = new URLSearchParams({
+    action: "query",
+    generator: "search",
+    gsrsearch: searchTerm,
+    gsrnamespace: "6",   // File namespace
+    gsrlimit: "3",
+    prop: "imageinfo",
+    iiprop: "url|mime",
+    iiurlwidth: "600",
+    format: "json",
+    origin: "*",
+  });
+  const res = await fetch(`https://commons.wikimedia.org/w/api.php?${params}`);
+  if (!res.ok) return null;
+  const data = await res.json();
+  const pages = data.query?.pages;
+  if (!pages) return null;
+  // Erstes Ergebnis das ein Bild ist (kein SVG, kein OGG)
+  const img = Object.values(pages).find((p) => {
+    const mime = p.imageinfo?.[0]?.mime || "";
+    return mime.startsWith("image/") && mime !== "image/svg+xml";
+  });
+  return img?.imageinfo?.[0]?.thumburl || null;
+}
+
+// Botanischen Namen bereinigen für Wikipedia / Commons-Suche
+function cleanBotanicalName(botanicalName) {
   return botanicalName
-    .replace(/\s*'[^']*'/g, "")       // 'Cultivar' entfernen
-    .replace(/\s+Cultivars?$/i, "")    // "Cultivars" entfernen
-    .replace(/\s*[×x]\s+/g, " ")      // × oder x (Hybrid) entfernen
-    .replace(/\s+(ssp\.|subsp\.|var\.|f\.)\s+\S+/g, "") // ssp./var. entfernen
+    .replace(/\s*'[^']*'/g, "")
+    .replace(/\s+Cultivars?$/i, "")
+    .replace(/\s*[×x]\s+/g, " ")
+    .replace(/\s+(ssp\.|subsp\.|var\.|f\.)\s+\S+/g, "")
     .trim();
 }
 
 async function fetchPlantImage(plant) {
+  // User-uploaded image has top priority
+  const userImgs = loadUserImages();
+  if (userImgs[plant.id]) return userImgs[plant.id];
+
   if (imgCache[plant.id] !== undefined) return imgCache[plant.id];
 
   const taxon = TAXON_IDS[plant.id] || {};
   let photo = null;
 
-  // Expliziter Wiki-Titel aus taxon-ids.js, sonst aus botanischem Namen ableiten
-  const wikiTitle = taxon.wiki || wikiTitleFromBotanical(plant.botanicalName);
+  // 0. Lokales Bild hat höchste Priorität (images/{id}.jpg)
+  if (taxon.localImage) {
+    imgCache[plant.id] = taxon.localImage;
+    saveImgCache();
+    return taxon.localImage;
+  }
+
+  const wikiTitle  = taxon.wiki || cleanBotanicalName(plant.botanicalName);
+  const comSearch  = taxon.commonsSearch || cleanBotanicalName(plant.botanicalName);
 
   if (taxon.preferWiki) {
-    // Kultivare: erst spezifischer Wiki-Titel, dann iNat, dann generischer Wiki-Titel
+    // Kultivare: Wiki → iNat → Commons
     photo = await fetchFromWiki(wikiTitle);
-    if (!photo && taxon.inat) photo = await fetchFromiNat(taxon.inat).catch(() => null);
+    if (!photo && taxon.inat) photo = await fetchFromiNat(taxon.inat);
+    if (!photo) photo = await fetchFromCommons(comSearch);
   } else {
-    // Normalfall: iNat zuerst, dann Wiki als Fallback
-    if (taxon.inat) photo = await fetchFromiNat(taxon.inat).catch(() => null);
-    if (!photo)     photo = await fetchFromWiki(wikiTitle);
+    // Standard: iNat → Wiki → Commons
+    if (taxon.inat) photo = await fetchFromiNat(taxon.inat);
+    if (!photo) photo = await fetchFromWiki(wikiTitle);
+    if (!photo) photo = await fetchFromCommons(comSearch);
   }
 
   imgCache[plant.id] = photo ?? null;
@@ -290,6 +356,8 @@ function renderPlantDetail(app) {
     return;
   }
   const status = getPlantStatus(plant.id);
+  const userImgs = loadUserImages();
+  const hasUserImg = !!userImgs[plant.id];
 
   app.innerHTML = `
     <div class="detail">
@@ -327,6 +395,27 @@ function renderPlantDetail(app) {
             </button>
           </div>
         </div>
+
+        <div class="upload-section">
+          <p class="section-label">Eigenes Bild</p>
+          ${hasUserImg ? `
+            <div class="upload-actions">
+              <button class="upload-action-btn upload-action-submit" onclick="submitUserImage('${plant.id}', '${escHtml(plant.germanName)}')">
+                📤 Bild einreichen
+              </button>
+              <button class="upload-action-btn upload-action-delete" onclick="deleteUserImageAndReload('${plant.id}')">
+                🗑 Entfernen
+              </button>
+            </div>
+            <p class="upload-hint">Dein eigenes Bild wird angezeigt.</p>
+          ` : `
+            <label class="upload-label">
+              📷 Eigenes Foto hinzufügen
+              <input type="file" accept="image/*" style="display:none" onchange="handleImageUpload(event, '${plant.id}')">
+            </label>
+            <p class="upload-hint">Wird lokal gespeichert und hat Vorrang vor dem Standard-Bild.</p>
+          `}
+        </div>
       </div>
     </div>
   `;
@@ -343,6 +432,75 @@ function renderPlantDetail(app) {
 function setStatus(id, status) {
   markPlant(id, status);
   renderPlantDetail(document.getElementById("app"));
+}
+
+// ─── User image upload ────────────────────────────────────────────────────────
+function handleImageUpload(event, plantId) {
+  const file = event.target.files?.[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    const img = new Image();
+    img.onload = () => {
+      // Scale down to max 900px wide to avoid filling localStorage
+      const maxW = 900;
+      const scale = img.width > maxW ? maxW / img.width : 1;
+      const canvas = document.createElement("canvas");
+      canvas.width = Math.round(img.width * scale);
+      canvas.height = Math.round(img.height * scale);
+      canvas.getContext("2d").drawImage(img, 0, 0, canvas.width, canvas.height);
+      const dataUrl = canvas.toDataURL("image/jpeg", 0.85);
+      if (saveUserImage(plantId, dataUrl)) {
+        // Clear API cache so the user image is shown immediately
+        delete imgCache[plantId];
+        saveImgCache();
+        renderPlantDetail(document.getElementById("app"));
+      }
+    };
+    img.src = e.target.result;
+  };
+  reader.readAsDataURL(file);
+}
+
+function deleteUserImageAndReload(plantId) {
+  if (!confirm("Eigenes Bild entfernen?")) return;
+  deleteUserImage(plantId);
+  renderPlantDetail(document.getElementById("app"));
+}
+
+function submitUserImage(plantId, germanName) {
+  const userImgs = loadUserImages();
+  const dataUrl = userImgs[plantId];
+  if (!dataUrl) return;
+
+  // Download the image with the correct filename for the app
+  const ext = dataUrl.startsWith("data:image/png") ? "png" : "jpeg";
+  const filename = `${plantId}.${ext}`;
+  const a = document.createElement("a");
+  a.href = dataUrl;
+  a.download = filename;
+  a.click();
+
+  // Show submit instructions modal
+  const overlay = document.createElement("div");
+  overlay.className = "submit-overlay";
+  overlay.innerHTML = `
+    <div class="submit-modal">
+      <h3>Bild einreichen</h3>
+      <p>Das Bild wurde als <strong>${filename}</strong> heruntergeladen.</p>
+      <p class="submit-instructions">Sende die Datei per E-Mail an:<br>
+        <a href="mailto:monakoerding@gmail.com?subject=Pflanzenbild%20${encodeURIComponent(germanName)}%20(${plantId})&body=Hallo%2C%0A%0Aich%20m%C3%B6chte%20folgendes%20Bild%20f%C3%BCr%20die%20Pflanze%20%22${encodeURIComponent(germanName)}%22%20(${plantId})%20einreichen.%0A%0ABitte%20das%20Bild%20als%20Anhang%20hinzuf%C3%BCgen.%0A%0AViele%20Gr%C3%BC%C3%9Fe"
+           class="submit-mail-link">monakoerding@gmail.com</a>
+      </p>
+      <p class="submit-hint">Betreff und Text sind bereits vorausgefüllt – einfach das Bild als Anhang hinzufügen.</p>
+      <button class="submit-close-btn" onclick="this.closest('.submit-overlay').remove()">Schließen</button>
+    </div>
+  `;
+  document.body.appendChild(overlay);
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) overlay.remove();
+  });
 }
 
 // ─── Flashcard Setup ─────────────────────────────────────────────────────────

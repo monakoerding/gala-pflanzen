@@ -553,6 +553,97 @@ body {
 .prog-plant-name { font-size: .88rem; font-weight: 600; }
 .prog-plant-bot { font-size: .78rem; color: var(--gray-5); font-style: italic; text-align: right; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 55%; }
 
+/* ─── Upload Section ─────────────────────────────────────────────────────── */
+.upload-section {
+  margin: .75rem 1rem 0;
+  padding: .9rem 1rem;
+  background: #fff;
+  border-radius: var(--radius);
+  border: 1.5px solid var(--gray-2);
+}
+
+.upload-label {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  cursor: pointer;
+  background: var(--green-pale);
+  color: var(--green);
+  font-weight: 600;
+  font-size: .88rem;
+  padding: .55rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--green-light);
+  transition: background .15s;
+}
+.upload-label:hover { background: #b7e4c7; }
+
+.upload-hint {
+  margin-top: .5rem;
+  font-size: .78rem;
+  color: var(--gray-5);
+}
+
+.upload-actions {
+  display: flex;
+  gap: .6rem;
+  flex-wrap: wrap;
+}
+
+.upload-action-btn {
+  padding: .5rem .9rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: .85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity .15s;
+}
+.upload-action-btn:hover { opacity: .85; }
+.upload-action-submit { background: var(--green); color: #fff; }
+.upload-action-delete  { background: var(--gray-2); color: var(--gray-8); }
+
+/* ─── Submit Modal ───────────────────────────────────────────────────────── */
+.submit-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.45);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.submit-modal {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  max-width: 380px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+
+.submit-modal h3 { font-size: 1.1rem; }
+.submit-modal p  { font-size: .9rem; line-height: 1.5; }
+.submit-instructions { background: var(--gray-1); border-radius: var(--radius-sm); padding: .75rem; }
+.submit-mail-link { color: var(--green); font-weight: 600; word-break: break-all; }
+.submit-hint { font-size: .8rem; color: var(--gray-5); }
+
+.submit-close-btn {
+  margin-top: .25rem;
+  align-self: flex-end;
+  padding: .55rem 1.2rem;
+  background: var(--green);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  cursor: pointer;
+}
+
 /* ─── Scrollbar ───────────────────────────────────────────────────────────── */
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
